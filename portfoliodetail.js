@@ -11,13 +11,6 @@ const section22 = {
   seeGithub: 'images/seeSource.png',
   image10Desktop: 'images/Portfolio1.png',
 };
-function desktopPopup() {
-    
-}
-function mobilePopup()
-{
-
-}
 const main = document.querySelector('.main');
 const section2p = document.querySelector('.section2p');
 const see1 = document.querySelector('.see1');
@@ -33,8 +26,7 @@ seeProject.forEach((n) =>
     main.style.opacity = '0';
     section2p.style.display = 'block';
     mobilePopup();
-  })
-);
+  }));
 const desktopPop = document.querySelector('.desktop-popup');
 const close2 = document.querySelector('.close2');
 const myProject = document.querySelector('.my-project');
@@ -61,28 +53,28 @@ myProject.addEventListener('click', (e) => {
   desktopPop.style.marginBottom = '-40px';
   desktopPopup();
 });
-mobilePopup(){
-    const detailPopup = `<div class='multi-p'>
-        <h2 class='multi-postp'>${section22.multi}</h2>
-        <p class='close1'>x</p>
+function mobilePopup(){
+    const detailPopup = `<div class="multi-p">
+        <h2 class="multi-postp">${section22.multi}</h2>
+        <p class="close1">x</p>
       </div>
-      <div class='buttonsp'>
+      <div class="buttonsp">
         <ul>
           <li>
-            <button class='btnp'>${section22.buttonArray[0]}</button></li>
-          <li><button class='btnp'>${section22.buttonArray[1]}</button></li>
-          <li><button class='btnp'>${section22.buttonArray[2]}</button></li>
+            <button class="btnp">${section22.buttonArray[0]}</button></li>
+          <li><button class="btnp">${section22.buttonArray[1]}</button></li>
+          <li><button class="btnp">${section22.buttonArray[2]}</button></li>
         </ul>
       </div>
-      <div class='image-pop'>
-        <img src=${section22.image10} alt='number10' id='image-10'>
+      <div class="image-pop">
+        <img src=${section22.image10} alt="number10" id="image-10">
       </div>
-      <div class='lorem-pop'>
+      <div class="lorem-pop">
         <h3 class='lorem'>${section22.lorem}</h3>
       </div>
-      <div class='seeButtons'>
-        <img src=${section22.seeSource} alt='Source' id='seeSource'>
-        <img src=${section22.seeGithub} alt='Github' id="seeGithub">
+      <div class="seeButtons">
+        <img src=${section22.seeSource} alt="Source" id="seeSource">
+        <img src=${section22.seeGithub} alt="Github" id="seeGithub">
       </div>`;
     const section = document.querySelector('.section2p');
     const classDetail = document.createElement('div');
@@ -95,32 +87,32 @@ mobilePopup(){
       section2p.classList.remove('active');
     });
 }
-  desktopPopup() {
-    const desktopDetailSection = `<div class='multi-p'>
-        <h2 class='multi-postp-desktop'>${section22.multiDesktop}</h2>
-        <p class='close2'>&times;</p>
+function desktopPopup(){
+    const desktopDetailSection = `<div class="multi-p">
+        <h2 class="multi-postp-desktop">${section22.multiDesktop}</h2>
+        <p class="close2">&times;</p>
       </div>
-      <div class='buttonsp'>
+      <div class="buttonsp">
         <ul>
           <li>
-            <button class='btnp-desktop'>${section22.buttonArray[0]}</button></li>
-          <li><button class='btnp-desktop'>${section22.buttonArray[1]}</button></li>
-          <li><button class='btnp-desktop'>${section22.buttonArray[2]}</button></li>
+            <button class="btnp-desktop">${section22.buttonArray[0]}</button></li>
+          <li><button class="btnp-desktop">${section22.buttonArray[1]}</button></li>
+          <li><button class="btnp-desktop">${section22.buttonArray[2]}</button></li>
         </ul>
       </div>
-      <div class='desktop-popup-bottom'>
-        <div class='desktop-top'>
-          <div class='image-pop'>
-            <img src=${section22.image10Desktop} alt='number10' id='image-10-desktop'>
+      <div class="desktop-popup-bottom">
+        <div class="desktop-top">
+          <div class="image-pop">
+            <img src=${section22.image10Desktop} alt="number10" id="image-10-desktop">
           </div>
         </div>
-        <div class='desktop-bottom'>
-          <div class='lorem-pop'>
-            <h3 class='lorem-desktop'>${section22.loremDesktop}</h3>
+        <div class="desktop-bottom">
+          <div class="lorem-pop">
+            <h3 class="lorem-desktop">${section22.loremDesktop}</h3>
           </div>
-          <div class='seeButtons'>
-            <img src=${section22.seeSource} alt='Source' id="seeSource-desktop">
-            <img src=${section22.seeGithub} alt='Github' id='seeGithub-desktop'>
+          <div class="seeButtons">
+            <img src=${section22.seeSource} alt="Source" id="seeSource-desktop">
+            <img src=${section22.seeGithub} alt="Github" id="seeGithub-desktop">
           </div>
         </div>   
       </div>`;
