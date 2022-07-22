@@ -12,7 +12,7 @@ const section22 = {
   image10Desktop: 'images/Portfolio1.png',
 };
 function mobilePopup()
-function desktopPopup();
+function desktopPopup()
 const main = document.querySelector('.main');
 const section2p = document.querySelector('.section2p');
 const see1 = document.querySelector('.see1');
