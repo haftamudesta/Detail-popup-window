@@ -26,9 +26,10 @@ seeProject.forEach((n) =>
     main.style.opacity = '0';
     section2p.style.display = 'block';
     mobilePopup();
-  }));
+  })
+);
 const desktopPop = document.querySelector('.desktop-popup');
-const close2 = document.querySelector('.close2');
+const see2 = document.querySelector('.see2');
 const myProject = document.querySelector('.my-project');
 const section1 = document.querySelector('.section1');
 const section2 = document.querySelector('.section2');
@@ -53,8 +54,8 @@ myProject.addEventListener('click', (e) => {
   desktopPop.style.marginBottom = '-40px';
   desktopPopup();
 });
-function mobilePopup(){
-    const detailPopup = `<div class="multi-p">
+function mobilePopup() {
+  const detailPopup = `<div class="multi-p">
         <h2 class="multi-postp">${section22.multi}</h2>
         <p class="close1">x</p>
       </div>
@@ -70,25 +71,25 @@ function mobilePopup(){
         <img src=${section22.image10} alt="number10" id="image-10">
       </div>
       <div class="lorem-pop">
-        <h3 class='lorem'>${section22.lorem}</h3>
+        <h3 class="lorem">${section22.lorem}</h3>
       </div>
       <div class="seeButtons">
         <img src=${section22.seeSource} alt="Source" id="seeSource">
         <img src=${section22.seeGithub} alt="Github" id="seeGithub">
       </div>`;
-    const section = document.querySelector('.section2p');
-    const classDetail = document.createElement('div');
-    classDetail.classList.add('detail');
-    classDetail.insertAdjacentHTML('beforeend', detailPopup);
-    section.appendChild(class_detail);
-    document.querySelector('.close1').addEventListener('click', () => {
-      main.style.opacity = '1';
-      section2p.style.display = 'none';
-      section2p.classList.remove('active');
-    });
+  const section = document.querySelector('.section2p');
+  const classDetail = document.createElement('div');
+  classDetail.classList.add('detail');
+  classDetail.insertAdjacentHTML('beforeend', detailPopup);
+  section.appendChild(classDetail);
+  document.querySelector('.close1').addEventListener('click', () => {
+    main.style.opacity = '1';
+    section2p.style.display = 'none';
+    section2p.classList.remove('active');
+  });
 }
-function desktopPopup(){
-    const desktopDetailSection = `<div class="multi-p">
+function desktopPopup() {
+  const desktopDetailSection = `<div class="multi-p">
         <h2 class="multi-postp-desktop">${section22.multiDesktop}</h2>
         <p class="close2">&times;</p>
       </div>
@@ -116,18 +117,17 @@ function desktopPopup(){
           </div>
         </div>   
       </div>`;
-    const desktopPopup = document.querySelector('.desktop-popup');
-    const desktopDetailpopup = document.createElement('div');
-    desktopDetailpopup.classList.add('detail');
-    desktopDetailpopup.insertAdjacentHTML('beforeend', desktopDetailSection);
-    const desktopSection = document.querySelector('.desktop-popup');
-    desktopSection.appendChild(desktopDetailpopup);
-    document.querySelector('.close2').addEventListener('click', () => {
-      section2.style.opacity = '1';
-      section3.style.opacity = '1';
-      section4.style.opacity = '1';
-      section1.style.marginTop = '0';
-      desktopPop.style.display = 'none';
-    });
-  }
-  
+  const desktopPopup = document.querySelector('.desktop-popup');
+  const desktopDetailpopup = document.createElement('div');
+  desktopDetailpopup.classList.add('detail');
+  desktopDetailpopup.insertAdjacentHTML('beforeend', desktopDetailSection);
+  const desktopSection = document.querySelector('.desktop-popup');
+  desktopSection.appendChild(desktopDetailpopup);
+  document.querySelector('.close2').addEventListener('click', () => {
+    section2.style.opacity = '1';
+    section3.style.opacity = '1';
+    section4.style.opacity = '1';
+    section1.style.marginTop = '0';
+    desktopPop.style.display = 'none';
+  });
+}
