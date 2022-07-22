@@ -11,8 +11,13 @@ const section22 = {
   seeGithub: 'images/seeSource.png',
   image10Desktop: 'images/Portfolio1.png',
 };
-function mobilePopup()
+function mobilePopup() {
+    
+};
 function desktopPopup()
+{
+
+};
 const main = document.querySelector('.main');
 const section2p = document.querySelector('.section2p');
 const see1 = document.querySelector('.see1');
