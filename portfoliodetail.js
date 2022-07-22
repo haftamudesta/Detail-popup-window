@@ -20,14 +20,12 @@ see1.addEventListener('click', () => {
   section2p.style.display = 'block';
   mobilePopup();
 });
-seeProject.forEach((n) =>
-  n.addEventListener('click', (e) => {
+seeProject.forEach((n) =>n.addEventListener('click', (e) => {
     e.preventDefault();
     main.style.opacity = '0';
     section2p.style.display = 'block';
     mobilePopup();
-  })
-);
+  }));
 const desktopPop = document.querySelector('.desktop-popup');
 const see2 = document.querySelector('.see2');
 const myProject = document.querySelector('.my-project');
@@ -117,7 +115,6 @@ function desktopPopup() {
           </div>
         </div>   
       </div>`;
-  const desktopPopup = document.querySelector('.desktop-popup');
   const desktopDetailpopup = document.createElement('div');
   desktopDetailpopup.classList.add('detail');
   desktopDetailpopup.insertAdjacentHTML('beforeend', desktopDetailSection);
