@@ -13,6 +13,9 @@ const section22 = {
 };
 function mobilePopup() {
 }
+function desktopPopup() {
+    
+}
 const main = document.querySelector('.main');
 const section2p = document.querySelector('.section2p');
 const see1 = document.querySelector('.see1');
@@ -54,7 +57,7 @@ myProject.addEventListener('click', (e) => {
   desktopPop.style.marginBottom = '-40px';
   desktopPopup();
 });
-function mobilePopup() {
+mobilePopup(); {
   const detailPopup = `<div class="multi-p">
         <h2 class="multi-postp">${section22.multi}</h2>
         <p class="close1">x</p>
@@ -88,7 +91,7 @@ function mobilePopup() {
     section2p.classList.remove('active');
   });
 }
-function desktopPopup() {
+desktopPopup(); {
   const desktopDetailSection = `<div class="multi-p">
         <h2 class="multi-postp-desktop">${section22.multiDesktop}</h2>
         <p class="close2">&times;</p>
