@@ -11,7 +11,49 @@ const section22 = {
   seeGithub: 'images/seeSource.png',
   image10Desktop: 'images/Portfolio1.png',
 };
-
+function mobilePopup()
+function desktopPopup();
+const main = document.querySelector('.main');
+const section2p = document.querySelector('.section2p');
+const see1 = document.querySelector('.see1');
+const seeProject = document.querySelectorAll('.project');
+see1.addEventListener('click', () => {
+  main.style.opacity = '0';
+  section2p.style.display = 'block';
+  mobilePopup();
+});
+seeProject.forEach((n) => n.addEventListener('click', (e) => {
+    e.preventDefault();
+    main.style.opacity = '0';
+    section2p.style.display = 'block';
+    mobilePopup();
+}));
+const desktopPop = document.querySelector('.desktop-popup');
+const close2 = document.querySelector('.close2');
+const myProject = document.querySelector('.my-project');
+const section1 = document.querySelector('.section1');
+const section2 = document.querySelector('.section2');
+const section3 = document.querySelector('.section3');
+const section4 = document.querySelector('.section4');
+see2.addEventListener('click', () => {
+  section1.style.marginTop = '-620px';
+  section2.style.opacity = '0';
+  section3.style.opacity = '0';
+  section4.style.opacity = '0';
+  desktopPop.style.display = 'block';
+  desktopPop.style.marginBottom = '-40px';
+  desktopPopup();
+});
+myProject.addEventListener('click', (e) => {
+  e.preventDefault();
+  section1.style.marginTop = '-620px';
+  section2.style.opacity = '0';
+  section3.style.opacity = '0';
+  section4.style.opacity = '0';
+  desktopPop.style.display = 'block';
+  desktopPop.style.marginBottom = '-40px';
+  desktopPopup();
+});
 function mobilePopup() {
     const detailPopup = `<div class='multi-p'>
       <h2 class='multi-postp'>${section22.multi}</h2>
@@ -90,49 +132,3 @@ function mobilePopup() {
       desktopPop.style.display = 'none';
     });
   }
-  
-
-const main = document.querySelector('.main');
-const section2p = document.querySelector('.section2p');
-const see1 = document.querySelector('.see1');
-const seeProject = document.querySelectorAll('.project');
-
-see1.addEventListener('click', () => {
-  main.style.opacity = '0';
-  section2p.style.display = 'block';
-  mobilePopup();
-});
-
-seeProject.forEach((n) => n.addEventListener('click', (e) => {
-    e.preventDefault();
-    main.style.opacity = '0';
-    section2p.style.display = 'block';
-    mobilePopup();
-}));
-const desktopPop = document.querySelector('.desktop-popup');
-const close2 = document.querySelector('.close2');
-const myProject = document.querySelector('.my-project');
-const section1 = document.querySelector('.section1');
-const section2 = document.querySelector('.section2');
-const section3 = document.querySelector('.section3');
-const section4 = document.querySelector('.section4');
-see2.addEventListener('click', () => {
-  section1.style.marginTop = '-620px';
-  section2.style.opacity = '0';
-  section3.style.opacity = '0';
-  section4.style.opacity = '0';
-  desktopPop.style.display = 'block';
-  desktopPop.style.marginBottom = '-40px';
-  desktopPopup();
-});
-myProject.addEventListener('click', (e) => {
-  e.preventDefault();
-  section1.style.marginTop = '-620px';
-  section2.style.opacity = '0';
-  section3.style.opacity = '0';
-  section4.style.opacity = '0';
-  desktopPop.style.display = 'block';
-  desktopPop.style.marginBottom = '-40px';
-  desktopPopup();
-});
-
