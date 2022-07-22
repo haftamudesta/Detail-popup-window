@@ -12,6 +12,86 @@ const section22 = {
   image10Desktop: 'images/Portfolio1.png',
 };
 
+function mobilePopup() {
+    const detailPopup = `<div class='multi-p'>
+      <h2 class='multi-postp'>${section22.multi}</h2>
+      <p class='close1'>x</p>
+    </div>
+    <div class='buttonsp'>
+      <ul>
+        <li>
+          <button class='btnp'>${section22.buttonArray[0]}</button></li>
+        <li><button class='btnp'>${section22.buttonArray[1]}</button></li>
+        <li><button class='btnp'>${section22.buttonArray[2]}</button></li>
+      </ul>
+    </div>
+    <div class='image-pop'>
+      <img src=${section22.image10} alt='number10' id='image-10'>
+    </div>
+    <div class='lorem-pop'>
+      <h3 class='lorem'>${section22.lorem}</h3>
+    </div>
+    <div class='seeButtons'>
+      <img src=${section22.seeSource} alt='Source' id='seeSource'>
+      <img src=${section22.seeGithub} alt='Github' id="seeGithub">
+    </div>`;
+    const section = document.querySelector('.section2p');
+    const classDetail = document.createElement('div');
+    classDetail.classList.add('detail');
+    classDetail.insertAdjacentHTML('beforeend', detailPopup);
+    section.appendChild(class_detail);
+    document.querySelector('.close1').addEventListener('click', () => {
+      main.style.opacity = '1';
+      section2p.style.display = 'none';
+      section2p.classList.remove('active');
+    });
+  }
+  
+  function desktopPopup() {
+    const desktopDetailSection = `<div class='multi-p'>
+      <h2 class="multi-postp-desktop">${section22.multiDesktop}</h2>
+      <p class='close2'>&times;</p>
+    </div>
+    <div class='buttonsp'>
+      <ul>
+        <li>
+          <button class='btnp-desktop'>${section22.buttonArray[0]}</button></li>
+        <li><button class='btnp-desktop'>${section22.buttonArray[1]}</button></li>
+        <li><button class='btnp-desktop'>${section22.buttonArray[2]}</button></li>
+      </ul>
+    </div>
+    <div class='desktop-popup-bottom'>
+      <div class='desktop-top'>
+        <div class='image-pop'>
+          <img src=${section22.image10Desktop} alt='number10' id='image-10-desktop'>
+        </div>
+      </div>
+      <div class='desktop-bottom'>
+        <div class='lorem-pop'>
+          <h3 class='lorem-desktop'>${section22.loremDesktop}</h3>
+        </div>
+        <div class='seeButtons'>
+          <img src=${section22.seeSource} alt='Source' id="seeSource-desktop">
+          <img src=${section22.seeGithub} alt='Github' id='seeGithub-desktop'>
+        </div>
+      </div>   
+    </div>`;
+    const desktopPopup = document.querySelector('.desktop-popup');
+    const desktopDetailpopup = document.createElement('div');
+    desktopDetailpopup.classList.add('detail');
+    desktopDetailpopup.insertAdjacentHTML('beforeend', desktopDetailSection);
+    const desktopSection = document.querySelector('.desktop-popup');
+    desktopSection.appendChild(desktopDetailpopup);
+    document.querySelector('.close2').addEventListener('click', () => {
+      section2.style.opacity = '1';
+      section3.style.opacity = '1';
+      section4.style.opacity = '1';
+      section1.style.marginTop = '0';
+      desktopPop.style.display = 'none';
+    });
+  }
+  
+
 const main = document.querySelector('.main');
 const section2p = document.querySelector('.section2p');
 const see1 = document.querySelector('.see1');
@@ -23,21 +103,18 @@ see1.addEventListener('click', () => {
   mobilePopup();
 });
 
-seeProject.forEach((n) =>
-  n.addEventListener('click', (e) => {
+seeProject.forEach((n) => n.addEventListener('click', (e) => {
     e.preventDefault();
     main.style.opacity = '0';
     section2p.style.display = 'block';
     mobilePopup();
-  })
-);
+}));
 const desktopPop = document.querySelector('.desktop-popup');
 const close2 = document.querySelector('.close2');
-const see2 = document.querySelector('.see2');
 const myProject = document.querySelector('.my-project');
 const section1 = document.querySelector('.section1');
 const section2 = document.querySelector('.section2');
-const section3 = document.querySelector(".section3");
+const section3 = document.querySelector('.section3');
 const section4 = document.querySelector('.section4');
 see2.addEventListener('click', () => {
   section1.style.marginTop = '-620px';
@@ -59,81 +136,3 @@ myProject.addEventListener('click', (e) => {
   desktopPopup();
 });
 
-function mobilePopup() {
-  let detailPopup = `<div class='multi-p'>
-    <h2 class='multi-postp'>${section22.multi}</h2>
-    <p class='close1'>x</p>
-  </div>
-  <div class='buttonsp'>
-    <ul>
-      <li>
-        <button class='btnp'>${section22.buttonArray[0]}</button></li>
-      <li><button class='btnp'>${section22.buttonArray[1]}</button></li>
-      <li><button class='btnp'>${section22.buttonArray[2]}</button></li>
-    </ul>
-  </div>
-  <div class='image-pop'>
-    <img src=${section22.image10} alt='number10' id='image-10'>
-  </div>
-  <div class='lorem-pop'>
-    <h3 class='lorem'>${section22.lorem}</h3>
-  </div>
-  <div class='seeButtons'>
-    <img src=${section22.seeSource} alt='Source' id='seeSource'>
-    <img src=${section22.seeGithub} alt='Github' id="seeGithub">
-  </div>`;
-  const section = document.querySelector('.section2p');
-  const class_detail = document.createElement("div");
-  class_detail.classList.add('detail');
-  class_detail.insertAdjacentHTML('beforeend', detailPopup);
-  section.appendChild(class_detail);
-  document.querySelector('.close1').addEventListener('click', () => {
-    main.style.opacity = '1';
-    section2p.style.display = 'none';
-    section2p.classList.remove('active');
-  });
-}
-
-function desktopPopup() {
-  let desktop_detail_section = `<div class='multi-p'>
-    <h2 class="multi-postp-desktop">${section22.multiDesktop}</h2>
-    <p class='close2'>&times;</p>
-  </div>
-  <div class='buttonsp'>
-    <ul>
-      <li>
-        <button class='btnp-desktop'>${section22.buttonArray[0]}</button></li>
-      <li><button class='btnp-desktop'>${section22.buttonArray[1]}</button></li>
-      <li><button class='btnp-desktop'>${section22.buttonArray[2]}</button></li>
-    </ul>
-  </div>
-  <div class='desktop-popup-bottom'>
-    <div class='desktop-top'>
-      <div class='image-pop'>
-        <img src=${section22.image10Desktop} alt="number10" id='image-10-desktop'>
-      </div>
-    </div>
-    <div class='desktop-bottom'>
-      <div class='lorem-pop'>
-        <h3 class='lorem-desktop'>${section22.loremDesktop}</h3>
-      </div>
-      <div class='seeButtons'>
-        <img src=${section22.seeSource} alt='Source' id="seeSource-desktop">
-        <img src=${section22.seeGithub} alt='Github' id='seeGithub-desktop'>
-      </div>
-    </div>   
-  </div>`;
-  const desktop_popup = document.querySelector('.desktop-popup');
-  const desktop_detailpopup = document.createElement('div');
-  desktop_detailpopup.classList.add('detail');
-  desktop_detailpopup.insertAdjacentHTML('beforeend', desktop_detail_section);
-  const desktop_section = document.querySelector('.desktop-popup');
-  desktop_section.appendChild(desktop_detailpopup);
-  document.querySelector('.close2').addEventListener("click", () => {
-    section2.style.opacity = '1';
-    section3.style.opacity = '1';
-    section4.style.opacity = '1';
-    section1.style.marginTop = '0';
-    desktopPop.style.display = 'none';
-  });
-}

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
 html {
   width: 100%;
   height: 100%;
@@ -116,7 +117,6 @@ ul {
   position: relative;
   flex-direction: column;
   align-items: flex-start;
-  position: relative;
   width: 375px;
   height: 590px;
   left: 0;
@@ -907,8 +907,8 @@ ul {
 }
 
 .images1 {
-  size: 30px;
-  filter: 
+  font-size: 30px;
+  filter:
     invert(38%) sepia(41%) saturate(291%) hue-rotate(179deg)
     brightness(88%) contrast(97%);
 }
@@ -994,6 +994,7 @@ ul {
 .desktop-popup {
   display: none;
 }
+
 @media only screen and (min-width: 768px) {
   .nav-container {
     width: 100vw;
@@ -1127,7 +1128,6 @@ ul {
     padding-top: -24px;
     text-decoration: none;
   }
-  
 
   .section2 {
     width: 100vw;
@@ -1421,7 +1421,7 @@ ul {
     position: relative;
     width: 82%;
     padding-left: 8%;
-    padding-right: 8%; 
+    padding-right: 8%;
     margin-bottom: -20%;
     z-index: 99;
   }
